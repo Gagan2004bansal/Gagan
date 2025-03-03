@@ -97,7 +97,7 @@ export default function Contactus() {
                 </div>
                 <div className="w-10/12 md:w-6/12 mx-auto h-[0.5px] bg-zinc-600 my-10"></div>
                 <div className="flex gap-x-2 items-center justify-center">
-                    Gagan Bansal <Copyright size={20} />2024
+                    Gagan Bansal <Copyright size={20} />2025
                 </div>
             </div>
         </>

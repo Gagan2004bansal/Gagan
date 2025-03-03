@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Gagan2004bansal.github.io/Port/",
+  "homepage": "https://Gagan2004bansal.github.io/Gagan/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -15,6 +15,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@phosphor-icons/react": "^2.1.7",
+    "axios": "^1.8.1",
     "dotenv": "^16.4.7",
     "emailjs": "^4.0.3",
     "react": "^18.3.1",

@@ -22,9 +22,9 @@ export default function Home() {
                         <Link to="https://leetcode.com/u/Gagan_Bansal/">
                             <div className="text-yellow-500 text-lg">Leetcode</div>
                         </Link>
-                        <Link to="/">
+                        <a href="">
                             <div> CV</div>
-                        </Link>
+                        </a>
                     </div>
                 </div>
                 <div>
@@ -57,13 +57,13 @@ export default function Home() {
                         <span className="text-yellow-500 text-lg">Web Expertise</span> : HTML, CSS, Tailwind CSS, JavaScript, TypeScript, React.Js, Node.Js, Express.Js, RESTful API, MongoDB, SQL, Socket
                     </div>
                     <div>
-                        <span className="text-yellow-500 text-lg">Dev Tools</span> : Proficient in Linux environments, Visual Studio Code, Git, Github, Jupyter Notebook, Figma, Canva
+                        <span className="text-yellow-500 text-lg">Dev Tools</span> : Proficient in Linux environments, Visual Studio Code, AWS EC2, Git, Github, Jupyter Notebook, Figma, Canva
                     </div>
                     <div>
                         <span className="text-yellow-500 text-lg">Behavioral Skills</span> : Leadership, Conflict Resolution, Cross-Functional Collaboration, Hybrid
                     </div>
                     <div>
-                        <span className="text-yellow-500 text-lg">Courses</span> : Advanced Data Structures and Algorithms, Operating System, Computer Networks, Database Management System, Object Oriented Programming, SDLC, Complexity analysis
+                        <span className="text-yellow-500 text-lg">Courses</span> : Advanced Data Structures and Algorithms, Operating System, Computer Networks, Database Management System, Object Oriented Programming, System Design SDLC, Complexity analysis
                     </div>
                 </div>
             </div>
@@ -133,13 +133,9 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="w-10/12 md:w-6/12 mx-auto py-4 mt-10">
-                <button className="text-yellow-400 bg-black px-4 py-2 rounded-sm hover:text-yellow-500">edit</button>
-            </div>
-
             <div className="w-10/12 md:w-6/12 mx-auto h-[0.5px] bg-zinc-600 mt-10"></div>
             <div className="flex gap-x-2 items-center justify-center py-4">
-                Gagan Bansal <Copyright size={20} />2024
+                Gagan Bansal <Copyright size={20} />2025
             </div>
 
         </div>
