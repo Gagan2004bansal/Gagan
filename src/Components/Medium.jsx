@@ -76,21 +76,21 @@ const Medium = ({ username = 'gaganbansal475' }) => {
             />
           </div>
           <div className="p-4 flex-grow flex flex-col">
-            <h3 className="text-xl text-black font-semibold mb-2 overflow-hidden text-ellipsis" style={{display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical'}}>
+            <h3 className="text-xl text-white font-semibold mb-2 overflow-hidden text-ellipsis" style={{display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical'}}>
               {article.title}
             </h3>
             <p className="text-white opacity-50 mb-4 overflow-hidden text-ellipsis" style={{display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical'}}>
               {extractPreview(article.content)}
             </p>
             <div className="mt-auto flex justify-between items-center">
-              <span className="text-sm text-gray-500">
+              <span className="text-sm text-yellow-600">
                 {new Date(article.pubDate).toLocaleDateString()}
               </span>
               <a 
                 href={article.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
               >
                 Read on Medium
               </a>

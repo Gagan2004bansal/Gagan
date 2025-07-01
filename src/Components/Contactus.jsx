@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import { useState } from 'react';
-import { Copyright } from "@phosphor-icons/react";
+import { Heart } from "@phosphor-icons/react";
 import emailjs from '@emailjs/browser';
 
 const REACT_APP_SERVICE_ID = "service_76y714d";
@@ -97,7 +97,7 @@ export default function Contactus() {
                 </div>
                 <div className="w-10/12 md:w-6/12 mx-auto h-[0.5px] bg-zinc-600 my-10"></div>
                 <div className="flex gap-x-2 items-center justify-center">
-                    Gagan Bansal <Copyright size={20} />2025
+                    Love <span className="text-red-600"><Heart size={32}/></span> to see your message
                 </div>
             </div>
         </>
