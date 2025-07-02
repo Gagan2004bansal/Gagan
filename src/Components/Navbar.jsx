@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HouseLine, UserCirclePlus, ArticleMedium } from "@phosphor-icons/react"
+import { HouseLine, UserCirclePlus, ArticleMedium, NotePencil } from "@phosphor-icons/react"
 
 
 export default function Navbar() {
@@ -15,6 +15,11 @@ export default function Navbar() {
                 <Link to='/article'>
                 <div className="hover:text-yellow-200 cursor-pointer">
                   <ArticleMedium size={32} />
+                </div>
+                </Link>
+                <Link to='/notes'>
+                <div className="hover:text-yellow-200 cursor-pointer">
+                  <NotePencil size={32} />
                 </div>
                 </Link>
                 <Link to='/contact'>

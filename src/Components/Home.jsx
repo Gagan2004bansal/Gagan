@@ -28,7 +28,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div>
-                    <img className="w-48 h-48 rounded-full object-cover object-center" src="https://res.cloudinary.com/dz5ezyudo/image/upload/v1733639948/Fav_copy_vgyj9e.jpg" alt="loading..." />
+                    <img className="w-48 h-48 rounded-full object-cover object-center" src="/Data/gagan.jpeg" alt="loading..." />
                 </div>
             </div>
 
@@ -57,7 +57,7 @@ export default function Home() {
                         <span className="text-yellow-500 text-lg">Web Expertise</span> : HTML, CSS, Tailwind CSS, JavaScript, React.Js, Node.Js, Express.Js, RESTful API, MongoDB, SQL, Socket
                     </div>
                     <div>
-                        <span className="text-yellow-500 text-lg">Dev Tools</span> : Linux environments, AWS EC2, Git, Github, Jupyter Notebook, Figma, Canva
+                        <span className="text-yellow-500 text-lg">Dev Tools</span> : Linux, AWS EC2, Git, Github, Jupyter Notebook, Figma, Canva
                     </div>
                     <div>
                         <span className="text-yellow-500 text-lg">Behavioral Skills</span> : Leadership, Active listening, Initiative, Adaptability
