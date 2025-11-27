@@ -22,7 +22,7 @@ export default function Home() {
                         <Link to="https://leetcode.com/u/Gagan_Bansal/">
                             <div className="text-yellow-500 text-lg cursor-pointer hover:text-white">Leetcode</div>
                         </Link>
-                        <a href="/Data/GaganBansalCV.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="/Data/GaganResume.pdf" target="_blank" rel="noopener noreferrer">
                             <div className="hover:text-yellow-200 cursor-pointer"><ReadCvLogo size={32} /></div>
                         </a>
                     </div>
@@ -48,7 +48,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-start justify-center gap-y-6 md:gap-x-16 w-10/12 md:w-6/12 mx-auto py-4 my-10">
-            <div className="text-xl font-bold"><span className="flex gap-x-2"><Lightbulb size={32} /> skills</span></div>
+                <div className="text-xl font-bold"><span className="flex gap-x-2"><Lightbulb size={32} /> skills</span></div>
                 <div className="opacity-80 gap-y-4">
                     <div>
                         <span className="text-yellow-500 text-lg">Languages</span> : C/C++, Rust, Java
@@ -69,10 +69,19 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-start justify-center gap-y-6 md:gap-x-16 w-10/12 md:w-6/12 mx-auto py-4 mt-10">
-            <div className="text-xl font-bold"><span className="flex gap-x-2"><Kanban size={32} /> project's</span></div>
+                <div className="text-xl font-bold"><span className="flex gap-x-2"><Kanban size={32} /> project's</span></div>
                 <div>
 
                     <div className="flex flex-col gap-y-4">
+
+                        <div className="flex items-center justify-center gap-x-4">
+                            <img className="w-28 h-28 object-cover rounded-full" src="https://res.cloudinary.com/dz5ezyudo/image/upload/v1764231283/Gemini_Generated_Image_hz5oe3hz5oe3hz5o_tkj65a.png" alt="loading..." />
+                            <div>
+                                <div className="text-red-500 underline">FlarePP</div>
+                                <div><span className="text-yellow-500">Features</span> : Built FlarePP, a creator–editor collaboration platform enabling footage upload, editor assignment, revision workflows, and one-click YouTube publishing via the YouTube Data API.</div>
+                            </div>
+                        </div>
+
                         <div className="flex items-center justify-center gap-x-4">
                             <img className="w-28 h-28 object-cover rounded-full" src="https://res.cloudinary.com/dz5ezyudo/image/upload/v1733649439/CDS_1_prjkrt.png" alt="loading..." />
                             <div>
@@ -94,15 +103,6 @@ export default function Home() {
                         </div>
 
                         <div className="flex items-center justify-center gap-x-4">
-                            <img className="w-28 h-28 object-cover rounded-full" src="https://res.cloudinary.com/dz5ezyudo/image/upload/v1733645065/CDS_unocpc.png" alt="loading..." />
-                            <div>
-                                <div className="text-red-500 underline">PingMe</div>
-                                <div><span className="text-yellow-500">Features</span> : Enhanced user engagement by implementing features like real-time typing indicators, online/offline status updates,
-                                    and media sharing, resulting in a smooth and responsive chat experience.</div>
-                            </div>
-                        </div>
-
-                        <div className="flex items-center justify-center gap-x-4">
                             <img className="w-28 h-28 object-cover" src="https://res.cloudinary.com/dz5ezyudo/image/upload/v1733644460/favicon_1_fq1wf0.png" alt="loading..." />
                             <div>
                                 <Link to="https://intellisync-hack.onrender.com/"><div className="text-red-500 underline">IntelliSync</div></Link>
@@ -115,7 +115,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-start justify-center gap-y-6 md:gap-x-16 w-10/12 md:w-6/12 mx-auto py-4 my-10">
-            <div className="text-xl font-bold"><span className="flex gap-x-2"><SketchLogo size={32} /> achievement</span></div>
+                <div className="text-xl font-bold"><span className="flex gap-x-2"><SketchLogo size={32} /> achievement</span></div>
                 <div className="opacity-80">
                     <div>
                         <span className="text-yellow-500 text-lg">Finalists</span> : Smart Cataloging Hackathon by Shopclues
@@ -125,7 +125,7 @@ export default function Home() {
                         <span className="text-yellow-500 text-lg">Specialization</span> : Ranked in the top 80 students among 2500+ students in the department and selected for UCA Batch in University
                     </div>
                     <div>
-                        <span className="text-yellow-500 text-lg">Grade</span> : I have consistently maintained a CGPA of 9.33 till today.
+                        <span className="text-yellow-500 text-lg">Grade</span> : I have consistently maintained a CGPA of 9.34 till today.
                     </div>
                     <div>
                         <span className="text-yellow-500 text-lg">Mastered</span> : I have solved over 1200+ questions across various platforms to strengthen my problem-solving skills.
@@ -137,6 +137,7 @@ export default function Home() {
             <div className="flex gap-x-2 items-center justify-center py-4">
                 Developed with <span className="text-red-600"><Heart size={32} /></span> by Gagan Bansal <Copyright size={20} />2025
             </div>
+            <div><img src="https://hits.sh/gagan-eosin.vercel.app.svg?style=flat-square" /></div>
 
         </div>
     )
