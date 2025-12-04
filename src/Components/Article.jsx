@@ -1,5 +1,7 @@
 import Navbar from "./Navbar";
 import Medium from "./Medium";
+import MachineLearning from './MachineLearning';
+
 
 export default function Article() {
   return (
@@ -8,12 +10,16 @@ export default function Article() {
       <Navbar />
 
       <div className="mt-8 text-center">
-        <span className="text-yellow-600">New Update soon</span> : I’ve just begun my Machine Learning journey, and a dedicated ML section will be added soon. I’ll be sharing day-wise progress, learning notes, and small ML projects as I move forward.
+        <span className="text-yellow-600">NOTE</span> : ML Section is currently in Testing Phase
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        <h2 className="text-3xl font-bold mb-6">My Medium Articles</h2>
+        <h2 className="text-2xl mb-6">My Medium Articles</h2>
         <Medium username="gaganbansal475" />
+
+        <div className='mt-10'>
+          <MachineLearning />
+        </div>
       </div>
 
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import { LinkedinLogo, GithubLogo, Copyright, ReadCvLogo, Heart, Wrench, Lightbulb, Kanban, SketchLogo } from "@phosphor-icons/react"
+import { LinkedinLogo, GithubLogo, Copyright, ReadCvLogo, Heart, Wrench, Lightbulb, Kanban, SketchLogo, InstagramLogo } from "@phosphor-icons/react"
 
 export default function Home() {
     return (
@@ -11,6 +11,7 @@ export default function Home() {
             <div className="flex flex-col-reverse items-center justify-center gap-y-6 md:gap-x-16 md:flex-row w-10/12 md:w-6/12 mx-auto py-4 my-10">
                 <div className="flex flex-col gap-y-2">
                     <h2 className="text-4xl">Gagan Bansal</h2>
+                    <p className="font-extralight text-slate-400"> - Upcoming R&D Intern at Quark</p>
                     <p className="font-extralight text-zinc-50 opacity-65">Final Year Student at Chitkara University, Chandigarh</p>
                     <div className="flex flex-row items-center justify-start gap-x-4">
                         <Link to="https://www.linkedin.com/in/bansalgagan2004/">
@@ -25,6 +26,9 @@ export default function Home() {
                         <a href="/Data/GaganResume.pdf" target="_blank" rel="noopener noreferrer">
                             <div className="hover:text-yellow-200 cursor-pointer"><ReadCvLogo size={32} /></div>
                         </a>
+                        <Link to="https://www.instagram.com/gaganbansal04/">
+                            <div className="hover:text-pink-500 cursor-pointer"><InstagramLogo size={32} /></div>
+                        </Link>
                     </div>
                 </div>
                 <div>

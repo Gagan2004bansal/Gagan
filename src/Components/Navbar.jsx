@@ -17,7 +17,7 @@ export default function Navbar() {
                   <ArticleMedium size={32} />
                 </div>
                 </Link>
-                <Link to='/notes'>
+                <Link to='/certifications'>
                 <div className="hover:text-yellow-200 cursor-pointer">
                   <NotePencil size={32} />
                 </div>

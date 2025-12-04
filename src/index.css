@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --text: #0f1724;
+    --accent: #6366f1;
+  }
+  
+  [data-theme="dark"] {
+    --bg: #0b1220;
+    --card: #071122;
+    --text: #e6eef8;
+    --accent: #7c3aed;
+  }
+  
+  body { background: var(--bg); color: var(--text); font-family: Inter, sans-serif; }
+  .editor-card { background: var(--card); border-radius: 10px; padding: 20px; box-shadow: 0 6px 18px rgba(11,22,40,0.06); }
+  .topbar { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .btn { padding:8px 12px; border-radius:6px; cursor:pointer; border:none; }
+  .btn-primary { background:var(--accent); color:white; }
+  
