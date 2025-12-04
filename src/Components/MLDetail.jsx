@@ -54,7 +54,10 @@ function MLDetail() {
   // Custom renderers for better styling
   const renderers = {
     paragraph: ({ data }) => (
-      <p className="text-gray-300 mb-4 leading-relaxed text-lg">{data.text}</p>
+      <p
+        className="text-gray-300 mb-4 leading-relaxed text-lg"
+        dangerouslySetInnerHTML={{ __html: data.text }}
+      />
     ),
     header: ({ data }) => {
       const Tag = `h${data.level}`;
@@ -64,7 +67,12 @@ function MLDetail() {
         3: "text-2xl font-semibold text-yellow-400 mb-4 mt-6",
         4: "text-xl font-semibold text-yellow-400 mb-3 mt-5",
       };
-      return <Tag className={sizes[data.level] || sizes[4]}>{data.text}</Tag>;
+      return (
+        <Tag
+          className={sizes[data.level] || sizes[4]}
+          dangerouslySetInnerHTML={{ __html: data.text }}
+        />
+      );      
     },
     list: ({ data }) => {
       const ListTag = data.style === "ordered" ? "ol" : "ul";
