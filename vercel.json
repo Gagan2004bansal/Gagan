@@ -1,8 +1,13 @@
 {
     "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/"
-        }
+      {
+        "source": "/api/(.*)",
+        "destination": "https://gagan-backend-k9x1.onrender.com/api/$1"
+      },
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
     ]
-}
+  }
+  
