@@ -99,6 +99,11 @@ function MLDetail() {
         {data.text}
       </blockquote>
     ),
+    code: ({ data }) => (
+      <pre className="bg-black/40 text-white p-4 rounded-lg overflow-x-auto my-4 text-sm">
+        <code>{data.code}</code>
+      </pre>
+    ),
   };
 
   return (

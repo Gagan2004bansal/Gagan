@@ -22,7 +22,7 @@ function MachineLearning() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.slice().reverse().map((post) => (
             <div key={post._id} className="bg-zinc-800 rounded-md p-4">
-              <img className="rounded-md" src={post.thumbnail} />
+              <img className="rounded-md max-h-64 w-full hover:border-b-2 hover:border-b-yellow-500" src={post.thumbnail} />
 
               <div className="text-xl text-yellow-400 mt-3">{post.title}</div>
 
