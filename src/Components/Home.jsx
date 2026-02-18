@@ -58,7 +58,7 @@ export default function Home() {
                         <span className="text-yellow-500 text-lg">Languages</span> : C/C++, Rust, Java
                     </div>
                     <div>
-                        <span className="text-yellow-500 text-lg">Web Expertise</span> : HTML, CSS, Tailwind CSS, JavaScript, React.Js, Node.Js, Express.Js, RESTful API, MongoDB, SQL, Socket
+                        <span className="text-yellow-500 text-lg">Web Expertise</span> : Tailwind CSS, JavaScript, React.Js, Node.Js, Express.Js, RESTful API, MongoDB, SQL, Socket
                     </div>
                     <div>
                         <span className="text-yellow-500 text-lg">Dev Tools</span> : Linux, AWS EC2, Git, Github, Jupyter Notebook, Figma, Canva
@@ -77,6 +77,14 @@ export default function Home() {
                 <div>
 
                     <div className="flex flex-col gap-y-4">
+
+                        <div className="flex items-center justify-center gap-x-4">
+                            <img className="w-28 h-28 object-cover rounded-full" src="https://pandorafms.com/blog/wp-content/uploads/2019/03/what-is-cache-memory-featured.jpg" alt="loading..." />
+                            <div>
+                                <div className="text-red-500 underline">KVMemo</div>
+                                <div><span className="text-yellow-500">Features</span> : KVMemo — A high performance, cross-platform in-memory key-value store written in C++.</div>
+                            </div>
+                        </div>
 
                         <div className="flex items-center justify-center gap-x-4">
                             <img className="w-28 h-28 object-cover rounded-full" src="https://res.cloudinary.com/dz5ezyudo/image/upload/v1764231283/Gemini_Generated_Image_hz5oe3hz5oe3hz5o_tkj65a.png" alt="loading..." />
@@ -139,7 +147,7 @@ export default function Home() {
 
             <div className="w-10/12 md:w-6/12 mx-auto h-[0.5px] bg-zinc-600 mt-10"></div>
             <div className="flex gap-x-2 items-center justify-center py-4">
-                Developed with <span className="text-red-600"><Heart size={32} /></span> by Gagan Bansal <Copyright size={20} />2025
+                Developed with <span className="text-red-600"><Heart size={32} /></span> by Gagan Bansal <Copyright size={20} />2026
             </div>
             <div><img src="https://hits.sh/gagan-eosin.vercel.app.svg?style=flat-square" /></div>
 

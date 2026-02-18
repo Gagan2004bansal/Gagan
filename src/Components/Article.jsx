@@ -9,10 +9,6 @@ export default function Article() {
 
       <Navbar />
 
-      <div className="mt-8 text-center">
-        <span className="text-yellow-600">NOTE</span> : ML Section is currently in Testing Phase
-      </div>
-
       <div className="container mx-auto px-4 py-8">
         <h2 className="text-2xl mb-6">My Medium Articles</h2>
         <Medium username="gaganbansal475" />
