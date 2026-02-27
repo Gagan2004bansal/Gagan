@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
-import { LinkedinLogo, GithubLogo, Copyright, ReadCvLogo, Heart, Wrench, Lightbulb, Kanban, SketchLogo, InstagramLogo } from "@phosphor-icons/react"
+import { LinkedinLogo, GithubLogo, Copyright, ReadCvLogo, Heart, Wrench, Lightbulb, Kanban, SketchLogo, InstagramLogo, ButterflyIcon } from "@phosphor-icons/react"
 
 export default function Home() {
     return (
@@ -52,13 +52,28 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-start justify-center gap-y-6 md:gap-x-16 w-10/12 md:w-6/12 mx-auto py-4 my-10">
+                <div className="text-xl font-bold"><span className="flex gap-x-2"><ButterflyIcon size={32} /> experience</span></div>
+                <div className="flex flex-col items-start justify-start opacity-80 w-full">
+                    <div className="flex flex-row justify-between items-center w-full">
+                        <div className="text-lg font-bold">Research & Development Intern</div>
+                        <div className="text-lg text-yellow-500 font-semibold">Quark</div>
+                    </div>              
+                    <div>Jan 2026 - present</div>    
+                    <div className="mt-2">- Research on how we should add Client side code using gSOAP to directly interact with C/C++ codebase with Axis2 based server.</div>  
+                    <div className="mt-2">- Analyzing and updating legacy server code to support Apple Silicon (ARM) architecture, involving platform-specific
+                    dependencies and build pipeline understanding.</div>
+                </div>
+                
+            </div>
+
+            <div className="flex flex-col items-start justify-center gap-y-6 md:gap-x-16 w-10/12 md:w-6/12 mx-auto py-4 my-10">
                 <div className="text-xl font-bold"><span className="flex gap-x-2"><Lightbulb size={32} /> skills</span></div>
                 <div className="opacity-80 gap-y-4">
                     <div>
                         <span className="text-yellow-500 text-lg">Languages</span> : C/C++, Rust, Java
                     </div>
                     <div>
-                        <span className="text-yellow-500 text-lg">Web Expertise</span> : Tailwind CSS, JavaScript, React.Js, Node.Js, Express.Js, RESTful API, MongoDB, SQL, Socket
+                        <span className="text-yellow-500 text-lg">Web Expertise</span> : Tailwind CSS, JavaScript, React.Js, Node.Js, Express.Js, RESTful API, MongoDB, SQL
                     </div>
                     <div>
                         <span className="text-yellow-500 text-lg">Dev Tools</span> : Linux, AWS EC2, Git, Github, Jupyter Notebook, Figma, Canva
@@ -79,7 +94,7 @@ export default function Home() {
                     <div className="flex flex-col gap-y-4">
 
                         <div className="flex items-center justify-center gap-x-4">
-                            <img className="w-28 h-28 object-cover rounded-full" src="https://pandorafms.com/blog/wp-content/uploads/2019/03/what-is-cache-memory-featured.jpg" alt="loading..." />
+                            <img className="w-28 h-28 object-cover rounded-full" src="https://raw.githubusercontent.com/Gagan2004bansal/KVMemo/main/docs/assets/kvmemo-logo.png" alt="loading..." />
                             <div>
                                 <div className="text-red-500 underline">KVMemo</div>
                                 <div><span className="text-yellow-500">Features</span> : KVMemo — A high performance, cross-platform in-memory key-value store written in C++.</div>
@@ -114,13 +129,6 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <div className="flex items-center justify-center gap-x-4">
-                            <img className="w-28 h-28 object-cover" src="https://res.cloudinary.com/dz5ezyudo/image/upload/v1733644460/favicon_1_fq1wf0.png" alt="loading..." />
-                            <div>
-                                <Link to="https://intellisync-hack.onrender.com/"><div className="text-red-500 underline">IntelliSync</div></Link>
-                                <div><span className="text-yellow-500">Features</span> : IntelliSync is a one-stop platform for computer science students, featuring an online compiler, subject roadmaps, quizzes, a helpful chatbot, and a vast library of downloadable books to support learning and development.</div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
@@ -137,7 +145,7 @@ export default function Home() {
                         <span className="text-yellow-500 text-lg">Specialization</span> : Ranked in the top 80 students among 2500+ students in the department and selected for UCA Batch in University
                     </div>
                     <div>
-                        <span className="text-yellow-500 text-lg">Grade</span> : I have consistently maintained a CGPA of 9.34 till today.
+                        <span className="text-yellow-500 text-lg">Grade</span> : I have consistently maintained a CGPA of 9.41 till today.
                     </div>
                     <div>
                         <span className="text-yellow-500 text-lg">Mastered</span> : I have solved over 1200+ questions across various platforms to strengthen my problem-solving skills.
