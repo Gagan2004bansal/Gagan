@@ -260,7 +260,7 @@ export default function Home() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-                        <a href="mailto:gaganbansal2004@example.com" className="px-8 py-3 bg-emerald-600 text-white font-medium rounded hover:bg-emerald-700 transition-colors">
+                        <a href="mailto:bansalgagan2004@gmail.com" className="px-8 py-3 bg-emerald-600 text-white font-medium rounded hover:bg-emerald-700 transition-colors">
                             Send me an email
                         </a>
                         <a href="https://www.linkedin.com/in/bansalgagan2004/" target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-slate-500 text-white font-medium rounded hover:border-white transition-colors">
