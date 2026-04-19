@@ -1,164 +1,324 @@
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
-import { LinkedinLogo, GithubLogo, Copyright, ReadCvLogo, Heart, Wrench, Lightbulb, Kanban, SketchLogo, InstagramLogo, ButterflyIcon } from "@phosphor-icons/react"
+import { LinkedinLogo, GithubLogo, Copyright, ReadCvLogo, Heart, ArrowUpRight, Code } from "@phosphor-icons/react"
+import Navbar from './Navbar';
 
 export default function Home() {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <div className="bg-zinc-900 font-serif text-zinc-200">
+        <div className="bg-white text-slate-900 overflow-hidden">
+            {/* Navigation */}
+            <Navbar/>
 
-            <Navbar />
+            {/* Hero */}
+            <section className="pt-32 pb-24 px-6 lg:px-8 relative">
+                <div className="max-w-4xl mx-auto">
+                    <div className="space-y-8">
+                        <div className="space-y-4">
+                            <p style={{ fontFamily: "'Geist Mono', monospace" }} className="text-sm text-emerald-600 font-medium tracking-wide uppercase">
+                                Computer Scientist & Developer
+                            </p>
+                            <h1 style={{ fontFamily: "'Crimson Text', serif" }} className="text-7xl lg:text-8xl font-light leading-tight tracking-tight">
+                                Gagan<br />Bansal
+                            </h1>
+                        </div>
 
-            <div className="flex flex-col-reverse items-center justify-center gap-y-6 md:gap-x-16 md:flex-row w-10/12 md:w-6/12 mx-auto py-4 my-10">
-                <div className="flex flex-col gap-y-2">
-                    <h2 className="text-4xl">Gagan Bansal</h2>
-                    <p className="font-extralight text-slate-400"> - R&D Intern at Quark</p>
-                    <p className="font-extralight text-zinc-50 opacity-65">Final Year Student at Chitkara University, Chandigarh</p>
-                    <div className="flex flex-row items-center justify-start gap-x-4">
-                        <Link to="https://www.linkedin.com/in/bansalgagan2004/">
-                            <div className="hover:text-yellow-200 cursor-pointer"><LinkedinLogo size={32} /></div>
-                        </Link>
-                        <Link to="https://github.com/Gagan2004bansal">
-                            <div className="hover:text-yellow-200 cursor-pointer"><GithubLogo size={32} /></div>
-                        </Link>
-                        <Link to="https://leetcode.com/u/Gagan_Bansal/">
-                            <div className="text-yellow-500 text-lg cursor-pointer hover:text-white">Leetcode</div>
-                        </Link>
-                        <a href="/Data/GaganResume.pdf" target="_blank" rel="noopener noreferrer">
-                            <div className="hover:text-yellow-200 cursor-pointer"><ReadCvLogo size={32} /></div>
+                        <p className="text-lg text-slate-600 max-w-2xl leading-relaxed font-light">
+                            I build <span className="text-emerald-600 font-medium">scalable systems</span> and craft thoughtful digital experiences. Currently researching low-level optimizations at Quark Software (Trilogy). Student at Chitkara University.
+                        </p>
+
+                        <div className="flex gap-6 pt-4">
+                            <a href="#contact" className="inline-flex items-center gap-2 text-sm font-medium text-slate-900 border-b-2 border-emerald-600 pb-1 hover:text-emerald-600 transition-colors">
+                                Get in touch
+                                <ArrowUpRight size={16} weight="bold" />
+                            </a>
+                            <a href="/Data/GaganResume.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 border-b border-slate-300 pb-1 hover:text-slate-900 hover:border-slate-900 transition-colors">
+                                Resume
+                                <ArrowUpRight size={16} />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Decorative line */}
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+            </section>
+
+            {/* About */}
+            <section id="about" className="py-24 px-6 lg:px-8 bg-slate-50">
+                <div className="max-w-4xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                        <div className="lg:col-span-2 space-y-6">
+                            <h2 style={{ fontFamily: "'Crimson Text', serif" }} className="text-4xl font-light text-slate-900">
+                                About me
+                            </h2>
+                            <div className="space-y-4 text-slate-600 leading-relaxed font-light">
+                                <p>
+                                    I'm a final year computer science student passionate about building things that matter. My focus is on understanding how systems work at a fundamental level — from CPU architectures to distributed systems design.
+                                </p>
+                                <p>
+                                    At Quark, I'm working on integrating client-side code with legacy C++ servers, learning how real systems age and evolve. I'm equally interested in modern web technologies and low-level optimizations.
+                                </p>
+                                <p>
+                                    When I'm not coding, you'll find me reading about systems design, writing, playing guitar, or exploring the night sky.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="space-y-8">
+                            <div>
+                                <p style={{ fontFamily: "'Geist Mono', monospace" }} className="text-xs text-emerald-600 font-medium uppercase tracking-wider mb-3">
+                                    Key Stats
+                                </p>
+                                <ul className="space-y-2 text-sm text-slate-600 font-light">
+                                    <li>• CGPA: <span className="text-slate-900 font-medium">9.41</span></li>
+                                    <li>• DSA Problems: <span className="text-slate-900 font-medium">1200+</span></li>
+                                    <li>• Top <span className="text-slate-900 font-medium">80/2500</span> in dept</li>
+                                    <li>• Hackathon finalist</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <p style={{ fontFamily: "'Geist Mono', monospace" }} className="text-xs text-emerald-600 font-medium uppercase tracking-wider mb-3">
+                                    Social
+                                </p>
+                                <div className="flex gap-4">
+                                    <a href="https://github.com/Gagan2004bansal" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors">
+                                        <GithubLogo size={20} />
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/bansalgagan2004/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors">
+                                        <LinkedinLogo size={20} />
+                                    </a>
+                                    <a href="https://leetcode.com/u/Gagan_Bansal/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 transition-colors text-sm font-semibold">
+                                        LC
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Experience */}
+            <section id="work" className="py-24 px-6 lg:px-8">
+                <div className="max-w-4xl mx-auto">
+                    <h2 style={{ fontFamily: "'Crimson Text', serif" }} className="text-4xl font-light mb-16">
+                        Experience
+                    </h2>
+
+                    <div className="space-y-12">
+                        {/* Experience Item */}
+                        <div className="border-l-2 border-emerald-600 pl-8 pb-8">
+                            <div className="flex items-start justify-between mb-3">
+                                <div>
+                                    <h3 className="text-xl font-semibold text-slate-900">R&D Intern</h3>
+                                    <p className="text-emerald-600 font-medium">Quark</p>
+                                </div>
+                                <span style={{ fontFamily: "'Geist Mono', monospace" }} className="text-xs text-slate-500 font-medium">Jan 2026 – Now</span>
+                            </div>
+                            <ul className="space-y-2 text-slate-600 text-sm leading-relaxed font-light">
+                                <li>• Research on gSOAP client-side integration with Axis2 C/C++ servers</li>
+                                <li>• Modernizing legacy codebases for ARM64 architecture support</li>
+                                <li>• Deep dive into low-level optimizations and system design patterns</li>
+                            </ul>
+                        </div>
+
+                        <div className="border-l-2 border-slate-200 pl-8">
+                            <p className="text-slate-500 text-sm font-light">More experiences coming soon...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Projects */}
+            <section id="projects" className="py-24 px-6 lg:px-8 bg-slate-50">
+                <div className="max-w-4xl mx-auto">
+                    <h2 style={{ fontFamily: "'Crimson Text', serif" }} className="text-4xl font-light mb-16">
+                        Projects
+                    </h2>
+
+                    <div className="space-y-12">
+                        {[
+                            {
+                                title: "KVMemo",
+                                subtitle: "High-performance in-memory key-value store",
+                                description: "A cross-platform, concurrent KV store written in C++. Focus on performance and clean architecture.",
+                                tags: ["C++", "Systems", "Concurrency"],
+                                link: "https://www.kvmemo.dev/"
+                            },
+                            {
+                                title: "FlarePP",
+                                subtitle: "Creator-editor collaboration platform",
+                                description: "End-to-end platform for creators and editors. Upload, assign, collaborate, and publish directly to YouTube.",
+                                tags: ["MERN", "YouTube API", "Real-time"],
+                                link: "https://github.com/Gagan2004bansal/"
+                            },
+                            {
+                                title: "SANGAM",
+                                subtitle: "Collaborative note-taking application",
+                                description: "Real-time collaborative notes with powerful organization, tagging, and team features.",
+                                tags: ["React", "Real-time", "Web"],
+                                link: "https://github.com/Gagan2004bansal/SANGAM"
+                            },
+                            {
+                                title: "CDS Library",
+                                subtitle: "Custom C data structures library",
+                                description: "Comprehensive C library with linked lists, trees, graphs, sorting algorithms. Built for learning and production use.",
+                                tags: ["C", "Algorithms", "DSA"],
+                                link: "https://github.com/Gagan2004bansal/CDS"
+                            }
+                        ].map((project, idx) => (
+                            <a key={idx} href={project.link} className="group block border-b border-slate-200 pb-8 hover:border-emerald-600 transition-colors">
+                                <div className="space-y-3">
+                                    <div className="flex items-start justify-between">
+                                        <div>
+                                            <h3 className="text-2xl font-semibold text-slate-900 group-hover:text-emerald-600 transition-colors">
+                                                {project.title}
+                                            </h3>
+                                            <p className="text-slate-500 font-light mt-1">{project.subtitle}</p>
+                                        </div>
+                                        <ArrowUpRight size={20} className="text-slate-300 group-hover:text-emerald-600 transition-colors" />
+                                    </div>
+                                    <p className="text-slate-600 leading-relaxed font-light max-w-2xl">
+                                        {project.description}
+                                    </p>
+                                    <div className="flex gap-2 pt-2">
+                                        {project.tags.map((tag, i) => (
+                                            <span key={i} style={{ fontFamily: "'Geist Mono', monospace" }} className="text-xs text-slate-500 bg-slate-200 px-3 py-1 rounded">
+                                                {tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Skills */}
+            <section className="py-24 px-6 lg:px-8">
+                <div className="max-w-4xl mx-auto">
+                    <h2 style={{ fontFamily: "'Crimson Text', serif" }} className="text-4xl font-light mb-16">
+                        Skills & Tools
+                    </h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        {[
+                            {
+                                category: "Languages",
+                                items: ["C/C++", "Rust", "JavaScript", "Java"]
+                            },
+                            {
+                                category: "Web",
+                                items: ["React", "Node.js", "Express", "MongoDB", "SQL", "Tailwind CSS"]
+                            },
+                            {
+                                category: "Systems",
+                                items: ["Linux", "AWS", "Docker", "Git", "Figma"]
+                            },
+                            {
+                                category: "Core",
+                                items: ["System Design", "DSA", "Databases", "OS", "Networks"]
+                            }
+                        ].map((group, idx) => (
+                            <div key={idx}>
+                                <h3 style={{ fontFamily: "'Geist Mono', monospace" }} className="text-xs font-medium text-emerald-600 uppercase tracking-wider mb-4">
+                                    {group.category}
+                                </h3>
+                                <ul className="space-y-2">
+                                    {group.items.map((item, i) => (
+                                        <li key={i} className="text-slate-600 font-light flex items-center gap-2">
+                                            <span className="w-1 h-1 bg-emerald-600 rounded-full"></span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Contact CTA */}
+            <section id="contact" className="py-24 px-6 lg:px-8 bg-slate-900 text-white">
+                <div className="max-w-3xl mx-auto text-center space-y-8">
+                    <h2 style={{ fontFamily: "'Crimson Text', serif" }} className="text-5xl lg:text-6xl font-light leading-tight">
+                        Let's work together
+                    </h2>
+                    <p className="text-lg text-slate-300 font-light leading-relaxed">
+                        I'm always interested in hearing about interesting projects and opportunities. Drop me a message and let's create something meaningful.
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
+                        <a href="mailto:gaganbansal2004@example.com" className="px-8 py-3 bg-emerald-600 text-white font-medium rounded hover:bg-emerald-700 transition-colors">
+                            Send me an email
                         </a>
-                        <Link to="https://www.instagram.com/gaganbansal04/">
-                            <div className="hover:text-pink-500 cursor-pointer"><InstagramLogo size={32} /></div>
-                        </Link>
+                        <a href="https://www.linkedin.com/in/bansalgagan2004/" target="_blank" rel="noopener noreferrer" className="px-8 py-3 border border-slate-500 text-white font-medium rounded hover:border-white transition-colors">
+                            LinkedIn
+                        </a>
                     </div>
                 </div>
-                <div>
-                    <img className="w-48 h-48 rounded-full object-cover object-center" src="https://media.licdn.com/dms/image/v2/D5603AQHq_2VK_lsOjg/profile-displayphoto-crop_800_800/B56ZwnZYs7JMAI-/0/1770187500832?e=1772668800&v=beta&t=8VbMO7qMAgv8o3XPZd-oYqoJ15hsdjqtL7HR4AoEuY0" alt="loading..." />
-                </div>
-            </div>
+            </section>
 
-            <div className="flex flex-col items-start justify-center gap-y-6 md:gap-x-16 w-10/12 md:w-6/12 mx-auto py-4 my-10">
-                <div className="text-xl font-bold"><span className="flex gap-x-2"><Wrench size={32} /> about</span></div>
-                <div className="flex flex-col items-center justify-start gap-y-4 opacity-80">
-                    <div>Hey there, I’m Gagan — a Computer Science student who loves building things that solve real problems.</div>
-
-                    <div>Right now, I’m exploring Rust and diving deep into System Design (both HLD & LLD), leveling up my skills to build scalable, efficient systems. My toolkit also includes C/C++, MERN stack, UI Design, and solid DSA foundations.</div>
-
-                    <div>But beyond the code — I’m all about understanding the why behind products. Whether it’s designing intuitive user experiences, brainstorming solutions, or bringing ideas to life with a team, I enjoy every step of the process.</div>
-
-                    <div>When I’m not building or learning, you’ll catch me lost in books, writing about tech, jamming on my guitar, or chasing sunsets and late-night sky views.</div>
-
-                    <div>Always learning. Always building. Let’s create something meaning</div>
-                </div>
-            </div>
-
-            <div className="flex flex-col items-start justify-center gap-y-6 md:gap-x-16 w-10/12 md:w-6/12 mx-auto py-4 my-10">
-                <div className="text-xl font-bold"><span className="flex gap-x-2"><ButterflyIcon size={32} /> experience</span></div>
-                <div className="flex flex-col items-start justify-start opacity-80 w-full">
-                    <div className="flex flex-row justify-between items-center w-full">
-                        <div className="text-lg font-bold">Research & Development Intern</div>
-                        <div className="text-lg text-yellow-500 font-semibold">Quark</div>
-                    </div>              
-                    <div>Jan 2026 - present</div>    
-                    <div className="mt-2">- Research on how we should add Client side code using gSOAP to directly interact with C/C++ codebase with Axis2 based server.</div>  
-                    <div className="mt-2">- Analyzing and updating legacy server code to support Apple Silicon (ARM) architecture, involving platform-specific
-                    dependencies and build pipeline understanding.</div>
-                </div>
-                
-            </div>
-
-            <div className="flex flex-col items-start justify-center gap-y-6 md:gap-x-16 w-10/12 md:w-6/12 mx-auto py-4 my-10">
-                <div className="text-xl font-bold"><span className="flex gap-x-2"><Lightbulb size={32} /> skills</span></div>
-                <div className="opacity-80 gap-y-4">
-                    <div>
-                        <span className="text-yellow-500 text-lg">Languages</span> : C/C++, Rust, Java
+            {/* Footer */}
+            <footer className="border-t border-slate-200 py-12 px-6 lg:px-8 bg-white">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-sm text-slate-500 font-light">
+                    <div className="flex items-center gap-2">
+                        Developed with <Heart size={16} weight="fill" className="text-emerald-600" /> by Gagan
                     </div>
-                    <div>
-                        <span className="text-yellow-500 text-lg">Web Expertise</span> : Tailwind CSS, JavaScript, React.Js, Node.Js, Express.Js, RESTful API, MongoDB, SQL
+                    <div style={{ fontFamily: "'Geist Mono', monospace" }} className="text-xs">
+                        © 2026 • gagan
                     </div>
-                    <div>
-                        <span className="text-yellow-500 text-lg">Dev Tools</span> : Linux, AWS EC2, Git, Github, Jupyter Notebook, Figma, Canva
-                    </div>
-                    <div>
-                        <span className="text-yellow-500 text-lg">Behavioral Skills</span> : Leadership, Active listening, Initiative, Adaptability
-                    </div>
-                    <div>
-                        <span className="text-yellow-500 text-lg">Courses</span> : Data Structures and Algorithms, Operating System, Computer Networks, Database Management System, Object Oriented Programming, System Design, SDLC
+                    <div className="flex gap-6">
+                        <a href="https://github.com/Gagan2004bansal" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">GitHub</a>
+                        <a href="https://www.linkedin.com/in/bansalgagan2004/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 transition-colors">LinkedIn</a>
                     </div>
                 </div>
-            </div>
+            </footer>
 
-            <div className="flex flex-col items-start justify-center gap-y-6 md:gap-x-16 w-10/12 md:w-6/12 mx-auto py-4 mt-10">
-                <div className="text-xl font-bold"><span className="flex gap-x-2"><Kanban size={32} /> project's</span></div>
-                <div>
+            <style>{`
+                @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Geist+Mono:wght@400;500;600&display=swap');
 
-                    <div className="flex flex-col gap-y-4">
+                * {
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
 
-                        <div className="flex items-center justify-center gap-x-4">
-                            <img className="w-28 h-28 object-cover rounded-full" src="https://raw.githubusercontent.com/Gagan2004bansal/KVMemo/main/docs/assets/kvmemo-logo.png" alt="loading..." />
-                            <div>
-                                <div className="text-red-500 underline">KVMemo</div>
-                                <div><span className="text-yellow-500">Features</span> : KVMemo — A high performance, cross-platform in-memory key-value store written in C++.</div>
-                            </div>
-                        </div>
+                html {
+                    scroll-behavior: smooth;
+                }
 
-                        <div className="flex items-center justify-center gap-x-4">
-                            <img className="w-28 h-28 object-cover rounded-full" src="https://res.cloudinary.com/dz5ezyudo/image/upload/v1764231283/Gemini_Generated_Image_hz5oe3hz5oe3hz5o_tkj65a.png" alt="loading..." />
-                            <div>
-                                <div className="text-red-500 underline">FlarePP</div>
-                                <div><span className="text-yellow-500">Features</span> : Built FlarePP, a creator–editor collaboration platform enabling footage upload, editor assignment, revision workflows, and one-click YouTube publishing via the YouTube Data API.</div>
-                            </div>
-                        </div>
+                ::-webkit-scrollbar {
+                    width: 8px;
+                }
 
-                        <div className="flex items-center justify-center gap-x-4">
-                            <img className="w-28 h-28 object-cover rounded-full" src="https://res.cloudinary.com/dz5ezyudo/image/upload/v1733649439/CDS_1_prjkrt.png" alt="loading..." />
-                            <div>
-                                <Link to="https://github.com/Gagan2004bansal/SANGAM">
-                                    <div className="text-red-500 underline">Taskify</div>
-                                </Link>
-                                <div><span className="text-yellow-500">Features</span> : Sangam is a real-time collaborative note-taking app designed for seamless teamwork, allowing users to edit and share notes instantly. With powerful sorting features, users can easily organize and filter notes using tags, priorities, and custom views for efficient information management.</div>
-                            </div>
-                        </div>
+                ::-webkit-scrollbar-track {
+                    background: #f8fafc;
+                }
 
-                        <div className="flex items-center justify-center gap-x-4">
-                            <img className="w-28 h-28 object-cover rounded-full" src="https://res.cloudinary.com/dz5ezyudo/image/upload/v1733644765/Screenshot_2024-12-08_at_1.29.04_PM_ztj4bb.png" alt="loading..." />
-                            <div>
-                                <Link to="https://github.com/Gagan2004bansal/CDS">
-                                    <div className="text-red-500 underline">CDS Library</div>
-                                </Link>
-                                <div><span className="text-yellow-500">Features</span> : A custom C library featuring data structures like linked lists, stacks, queues, hash tables, trees, and graphs, along with sorting algorithms and a dynamic string utility. It aims to offer efficient and flexible tools for C projects.</div>
-                            </div>
-                        </div>
+                ::-webkit-scrollbar-thumb {
+                    background: #cbd5e1;
+                    border-radius: 4px;
+                }
 
-                    </div>
+                ::-webkit-scrollbar-thumb:hover {
+                    background: #94a3b8;
+                }
 
-                </div>
-            </div>
-
-            <div className="flex flex-col items-start justify-center gap-y-6 md:gap-x-16 w-10/12 md:w-6/12 mx-auto py-4 my-10">
-                <div className="text-xl font-bold"><span className="flex gap-x-2"><SketchLogo size={32} /> achievement</span></div>
-                <div className="opacity-80">
-                    <div>
-                        <span className="text-yellow-500 text-lg">Finalists</span> : Smart Cataloging Hackathon by Shopclues
-                        and selected in the Top 5 among 70+ teams.
-                    </div>
-                    <div>
-                        <span className="text-yellow-500 text-lg">Specialization</span> : Ranked in the top 80 students among 2500+ students in the department and selected for UCA Batch in University
-                    </div>
-                    <div>
-                        <span className="text-yellow-500 text-lg">Grade</span> : I have consistently maintained a CGPA of 9.41 till today.
-                    </div>
-                    <div>
-                        <span className="text-yellow-500 text-lg">Mastered</span> : I have solved over 1200+ questions across various platforms to strengthen my problem-solving skills.
-                    </div>
-                </div>
-            </div>
-
-            <div className="w-10/12 md:w-6/12 mx-auto h-[0.5px] bg-zinc-600 mt-10"></div>
-            <div className="flex gap-x-2 items-center justify-center py-4">
-                Developed with <span className="text-red-600"><Heart size={32} /></span> by Gagan Bansal <Copyright size={20} />2026
-            </div>
-            <div><img src="https://hits.sh/gagan-eosin.vercel.app.svg?style=flat-square" /></div>
-
+                a {
+                    -webkit-tap-highlight-color: transparent;
+                }
+            `}</style>
         </div>
     )
 }

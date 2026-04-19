@@ -56,7 +56,7 @@ export default function Contactus() {
 
     return (
         <>
-            <div className="bg-zinc-900 font-serif text-zinc-200 h-screen overflow-y-scroll">
+            <div className="bg-zinc-900 font-serif text-zinc-200 h-screen overflow-y-scroll mt-10">
                 <Navbar />
                 <div className="flex items-center justify-center mt-10">
                     <form onSubmit={sendEmail} className="flex flex-col gap-y-4 w-10/12 md:w-6/12 py-4">
@@ -96,9 +96,6 @@ export default function Contactus() {
                     </form>
                 </div>
                 <div className="w-10/12 md:w-6/12 mx-auto h-[0.5px] bg-zinc-600 my-10"></div>
-                <div className="flex gap-x-2 items-center justify-center">
-                    Love <span className="text-red-600"><Heart size={32}/></span> to see your message
-                </div>
             </div>
         </>
     );
