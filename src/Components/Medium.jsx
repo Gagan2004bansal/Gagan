@@ -67,7 +67,7 @@ const Medium = ({ username = 'gaganbansal475' }) => {
         {articles.map((article) => (
           <div
             key={article.guid}
-            className="bg-zinc-800 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
+            className="bg-zinc-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
           >
             <div className="h-48 overflow-hidden">
               <img

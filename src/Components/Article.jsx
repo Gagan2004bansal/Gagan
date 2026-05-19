@@ -32,14 +32,14 @@ export default function Article() {
       {/* Medium Articles Section */}
       <section className="py-16 px-6 lg:px-8 bg-slate-50">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-12">
+          {/* <div className="mb-12">
             <h2 style={{ fontFamily: "'Crimson Text', serif" }} className="text-3xl font-light mb-2">
               Medium Articles
             </h2>
             <p className="text-slate-600 font-light">
               Reading time, stories, and insights from my Medium profile.
             </p>
-          </div>
+          </div> */}
 
           <div className="bg-white border border-slate-200 rounded-lg p-8 hover:border-emerald-400 hover:shadow-md transition-all">
             <Medium username="gaganbansal475" />
@@ -48,7 +48,7 @@ export default function Article() {
       </section>
 
       {/* Machine Learning Section */}
-      <section className="py-16 px-6 lg:px-8">
+      {/* <section className="py-16 px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
             <h2 style={{ fontFamily: "'Crimson Text', serif" }} className="text-3xl font-light mb-2">
@@ -63,7 +63,7 @@ export default function Article() {
             <MachineLearning />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 px-6 lg:px-8 border-t border-slate-200">

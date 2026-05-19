@@ -46,16 +46,15 @@ export default function Navbar() {
               <Link to='/certifications'>
                 <div className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors cursor-pointer group">
                   {/* <Award size={20} className="group-hover:text-emerald-600 transition-colors" weight="bold" /> */}
-                  <span style={{ fontFamily: "'Geist Mono', monospace" }} className="text-xs font-medium uppercase tracking-wider">Achievements</span>
+                  <span style={{ fontFamily: "'Geist Mono', monospace" }} className="text-xs font-medium uppercase tracking-wider">Courses</span>
                 </div>
               </Link>
-
+{/* 
               <Link to='/contact'>
                 <div className="flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700 transition-colors cursor-pointer">
-                  {/* <Envelope size={18} weight="bold" /> */}
                   <span style={{ fontFamily: "'Geist Mono', monospace" }} className="text-xs font-medium uppercase tracking-wider">Contact</span>
                 </div>
-              </Link>
+              </Link> */}
             </div>
 
             {/* Mobile Navigation */}
