@@ -101,7 +101,7 @@ const certs = [
     issuer: "LinkedIn Learning",
     issuerTag: "LI",
     category: "Engineering",
-    img: "https://media.licdn.com/dms/image/v2/D5622AQG_RYTjYVEyfg/feedshare-shrink_1280/B56Z2NRFIsKYAM-/0/1776191558425?e=1779202148&v=beta&t=fhKHn1nDtiY3_Yxejs3brpu_9lwagm0YQ74zSCqeq6M",
+    img: "https://media.licdn.com/dms/image/v2/D5622AQG_RYTjYVEyfg/feedshare-shrink_1280/B56Z2NRFIsKYAM-/0/1776191558425?e=1779475225&v=beta&t=pWZ0U2bVP6BW7GxmK8YsdvYwsOEUNNHsRoNJDtWpwZI",
     link: "https://www.linkedin.com/learning/certificates/ed196d57010db1148603a2213e1cb6fe287b1c08f469bbb6c61ebdf5f7ae3d0f?trk=share_certificate",
     color: "#0e76a8",
     accent: "#0ea5e9",

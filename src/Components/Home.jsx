@@ -22,9 +22,10 @@ const AI_NODES = [
   { id: 'tokens',    label: 'Tokens',    full: 'Tokenization & Context Windows', x: 320, y: 115, status: 'building' },
   { id: 'mcp',       label: 'MCP',       full: 'Model Context Protocol',         x: 442, y: 55,  status: 'learning' },
   { id: 'langchain', label: 'LangChain', full: 'LLM Orchestration Framework',    x: 548, y: 118, status: 'building' },
+  { id: 'LLM',       label: 'LLM',       full: 'Large Language Model',           x: 208, y: 142, status: 'building' },
 ];
 
-const EDGES = [[0,1],[0,2],[1,2],[2,3],[2,4],[3,4]];
+const EDGES = [[0,1],[0,2],[0,5],[1,2],[2,3],[2,4],[2,5],[3,4]];
 
 function AIGraph() {
   const [hov, setHov] = useState(null);
@@ -150,9 +151,9 @@ export default function Home() {
   ];
 
   const skills = [
-    { cat: 'Languages', items: ['C/C++', 'Rust', 'JavaScript', 'Java'] },
-    { cat: 'Web', items: ['React', 'Node.js', 'Express', 'MongoDB', 'SQL', 'Tailwind'] },
-    { cat: 'Systems', items: ['Linux', 'AWS', 'Docker', 'Git', 'Figma'] },
+    { cat: 'Languages', items: ['C++', 'Java', 'JavaScript', 'Python (Basic)'] },
+    { cat: 'Web', items: ['React', 'Node.js', 'Express', 'MongoDB', 'SQL', 'PostgreSQL', 'TailwindCSS'] },
+    { cat: 'Systems', items: ['Linux', 'AWS (Basic)', 'Docker', 'Git', 'Claude Code'] },
     { cat: 'Core', items: ['System Design', 'DSA', 'Databases', 'OS', 'Networks'] },
   ];
 
@@ -232,9 +233,12 @@ export default function Home() {
               <span className="mono-date">Jan 2026 – Now</span>
             </div>
             <ul className="exp-list">
-              <li>Research on gSOAP client-side integration with Axis2 C/C++ servers</li>
-              <li>Modernizing legacy codebases for ARM64 architecture support</li>
-              <li>Deep dive into low-level optimizations and system design patterns</li>
+              <li>Porting and modernizing a legacy codebase to ensure compatibility with the latest macOS versions, supporting
+              both ARM64 (Apple Silicon) and x86-64 architectures.</li>
+              <li>Resolved complex cross-platform build and dependency issues involving OpenSSL and Axis2, ensuring stable builds
+              across ARM64 and x86 architectures.</li>
+              <li>Debugging and fixing low-level compatibility issues arising from architecture differences and deprecated system
+              APIs.</li>
             </ul>
           </div>
         </div>
