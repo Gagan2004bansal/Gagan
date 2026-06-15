@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from "./Navbar";
 import Medium from "./Medium";
-import MachineLearning from './MachineLearning';
 import { BookOpen, ArrowUpRight } from "@phosphor-icons/react";
 
 export default function Article() {
@@ -31,39 +30,13 @@ export default function Article() {
 
       {/* Medium Articles Section */}
       <section className="py-16 px-6 lg:px-8 bg-slate-50">
-        <div className="max-w-4xl mx-auto">
-          {/* <div className="mb-12">
-            <h2 style={{ fontFamily: "'Crimson Text', serif" }} className="text-3xl font-light mb-2">
-              Medium Articles
-            </h2>
-            <p className="text-slate-600 font-light">
-              Reading time, stories, and insights from my Medium profile.
-            </p>
-          </div> */}
+        <div className="max-w-6xl mx-auto">
 
           <div className="bg-white border border-slate-200 rounded-lg p-8 hover:border-emerald-400 hover:shadow-md transition-all">
             <Medium username="gaganbansal475" />
           </div>
         </div>
       </section>
-
-      {/* Machine Learning Section */}
-      {/* <section className="py-16 px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="mb-12">
-            <h2 style={{ fontFamily: "'Crimson Text', serif" }} className="text-3xl font-light mb-2">
-              Machine Learning & Deep Dives
-            </h2>
-            <p className="text-slate-600 font-light">
-              Detailed explorations into machine learning concepts, implementations, and research.
-            </p>
-          </div>
-
-          <div className="bg-slate-50 border border-slate-200 rounded-lg p-8">
-            <MachineLearning />
-          </div>
-        </div>
-      </section> */}
 
       {/* CTA Section */}
       <section className="py-16 px-6 lg:px-8 border-t border-slate-200">

@@ -18,14 +18,16 @@ function SideDots({ side }) {
 /* ─── GenAI Constellation ─────────────────────────────────── */
 const AI_NODES = [
   { id: 'rag',       label: 'RAG',       full: 'Retrieval-Augmented Generation', x: 68,  y: 95,  status: 'building' },
-  { id: 'vectordb',  label: 'VectorDB',  full: 'Embeddings & Semantic Search',   x: 208, y: 42,  status: 'learning' },
+  { id: 'vectordb',  label: 'VectorDB',  full: 'Embeddings & Semantic Search',   x: 208, y: 42,  status: 'building' },
   { id: 'tokens',    label: 'Tokens',    full: 'Tokenization & Context Windows', x: 320, y: 115, status: 'building' },
   { id: 'mcp',       label: 'MCP',       full: 'Model Context Protocol',         x: 442, y: 55,  status: 'learning' },
   { id: 'langchain', label: 'LangChain', full: 'LLM Orchestration Framework',    x: 548, y: 118, status: 'building' },
   { id: 'LLM',       label: 'LLM',       full: 'Large Language Model',           x: 208, y: 142, status: 'building' },
+  { id: 'agenticai',label: 'Agentic AI', full: 'Agentic AI Exploration',         x: 320, y: 35,  status: 'learning' },
+  { id: 'langgraph',label: 'LangGraph', full: 'Agentic AI Orchestration Framework',         x: 442, y: 155,  status: 'learning' },
 ];
 
-const EDGES = [[0,1],[0,2],[0,5],[1,2],[2,3],[2,4],[2,5],[3,4]];
+const EDGES = [[0,1],[0,2],[0,5],[1,2],[2,3],[2,4],[2,5],[3,4],[3,6], [6,7]];
 
 function AIGraph() {
   const [hov, setHov] = useState(null);
@@ -201,7 +203,7 @@ export default function Home() {
               <p className="mono-tag-sm">Key Stats</p>
               <table className="stats-table">
                 <tbody>
-                  {[['CGPA','9.41'],['DSA Problems','1300+'],['Dept Rank','Top 80/2500'],['Hackathon','Finalist']].map(([k,v])=>(
+                  {[['CGPA','9.44'],['DSA Problems','1300+'],['Dept Rank','Top 80/2500'],['Hackathon','Finalist']].map(([k,v])=>(
                     <tr key={k}>
                       <td className="stat-k">{k}</td>
                       <td className="stat-v">{v}</td>
@@ -230,7 +232,7 @@ export default function Home() {
                 <h3 className="exp-title">R&D Intern</h3>
                 <span className="exp-co">Quark (Trilogy)</span>
               </div>
-              <span className="mono-date">Jan 2026 – Now</span>
+              <span className="mono-date">Jan 2026 – June 2026</span>
             </div>
             <ul className="exp-list">
               <li>Porting and modernizing a legacy codebase to ensure compatibility with the latest macOS versions, supporting

@@ -11,24 +11,33 @@ const Medium = ({ username = 'gaganbansal475' }) => {
     const fetchArticles = async () => {
       try {
         setLoading(true);
-        // Using RSS2JSON to convert Medium's RSS feed to JSON
-        const response = await axios.get(
-          `https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@${username}`
+  
+        const url =
+          `https://api.rss2json.com/v1/api.json?rss_url=` +
+          encodeURIComponent(`https://medium.com/feed/@${username}`) +
+          `&_=${Date.now()}`;
+  
+        const { data } = await axios.get(url, {
+          headers: {
+            "Cache-Control": "no-cache",
+          },
+        });
+  
+        console.log("Fetched:", data.items);
+  
+        const sorted = [...data.items].sort(
+          (a, b) => new Date(b.pubDate) - new Date(a.pubDate)
         );
-
-        if (response.data.status === 'ok') {
-          setArticles(response.data.items);
-        } else {
-          throw new Error('Failed to fetch articles');
-        }
+  
+        setArticles(sorted);
       } catch (err) {
-        setError('Error fetching Medium articles. Please try again later.');
-        console.error(err);
+        console.log(err);
+        setError("Error fetching Medium articles");
       } finally {
         setLoading(false);
       }
     };
-
+  
     fetchArticles();
   }, [username]);
 
@@ -67,7 +76,7 @@ const Medium = ({ username = 'gaganbansal475' }) => {
         {articles.map((article) => (
           <div
             key={article.guid}
-            className="bg-zinc-900 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
+            className="bg-zinc-900 border-emerald-700 border-2 rounded-md overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col"
           >
             <div className="h-48 overflow-hidden">
               <img
@@ -85,14 +94,14 @@ const Medium = ({ username = 'gaganbansal475' }) => {
                 {extractPreview(article.content)}
               </p>
               <div className="mt-auto flex justify-between items-center">
-                <span className="text-sm text-yellow-600">
+                <span className="text-sm text-emerald-600">
                   {new Date(article.pubDate).toLocaleDateString()}
                 </span>
                 <a
                   href={article.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors duration-300"
                 >
                   Read on Medium
                 </a>
