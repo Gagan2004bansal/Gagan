@@ -66,7 +66,7 @@ function Reveal({ children, delay = 0 }) {
 const GENAI_SKILLS = [
   { label: 'RAG Pipelines',     status: 'done',     desc: 'Multi-doc retrieval with Pinecone + Gemini' },
   { label: 'LangChain',         status: 'done',     desc: 'LLM orchestration & chain composition' },
-  { label: 'LangGraph',         status: 'done',     desc: 'Stateful agentic graph workflows' },
+  { label: 'LangGraph',         status: 'active',     desc: 'Stateful agentic graph workflows' },
   { label: 'FastAPI',           status: 'active',   desc: 'Python async API server for AI backends' },
   { label: 'MCP',               status: 'active',   desc: 'Model Context Protocol server development' },
   { label: 'LLM Evals',         status: 'active',   desc: 'Evaluation frameworks & benchmarking' },
@@ -201,7 +201,7 @@ export default function Home() {
           </div>
 
           <p className="hero-body">
-            Software engineer focused on the intersection of systems programming and applied AI —
+            Software engineer focused on the intersection of backend programming and applied AI —
             from low-level C++ to RAG pipelines and agentic workflows.
             Recently completed an R&D internship at Quark Software porting legacy macOS/ARM64 C++ systems.
           </p>
@@ -255,7 +255,7 @@ export default function Home() {
               <div className="about-left">
                 <p className="section-label">About</p>
                 <h2 className="section-h2">
-                  Engineer at the boundary of systems and AI.
+                  Engineer at the boundary of backend and AI.
                 </h2>
                 <p className="body-text">
                   Final-year CS graduate from Chitkara University with a 9.44 CGPA.
@@ -307,7 +307,7 @@ export default function Home() {
                 <li>Debugged low-level crashes from architecture ABI differences and deprecated POSIX APIs by reading disassembly and kernel logs — no external debugger for the hot paths.</li>
               </ul>
               <div className="exp-tags">
-                {['C++', 'macOS', 'ARM64', 'OpenSSL', 'CMake', 'Xcode'].map(t => (
+                {['C++', 'Objective-C', 'Cocoa', 'macOS', 'ARM64', 'OpenSSL', 'CMake', 'Xcode'].map(t => (
                   <span key={t} className="tag">{t}</span>
                 ))}
               </div>
@@ -429,7 +429,7 @@ export default function Home() {
             </h2>
             <p className="contact-sub">
               Open to remote freelance contracts, full-time roles, and interesting collaborations.
-              AI systems, developer tools, and systems engineering.
+              AI systems, developer tools, and backend engineering.
             </p>
             <div className="contact-ctas">
               <a href="mailto:bansalgagan2004@gmail.com" className="cta-primary cta-lg">
