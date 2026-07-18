@@ -166,7 +166,7 @@ export default function Home() {
     { cat: 'Systems',    items: ['Linux', 'Docker', 'Git', 'AWS', 'ARM64'] },
     { cat: 'Backend',    items: ['Node.js', 'Express', 'FastAPI', 'PostgreSQL', 'MongoDB'] },
     { cat: 'Frontend',   items: ['React', 'Vite', 'Tailwind', 'Socket.IO'] },
-    { cat: 'GenAI',      items: ['LangChain', 'LangGraph', 'Pinecone', 'Gemini API', 'MCP'] },
+    { cat: 'GenAI',      items: ['LLMs API','LangChain', 'LangGraph', 'LangSmith', 'Pinecone', 'Gemini API', 'MCP'] },
     { cat: 'Core CS',    items: ['System Design', 'DSA', 'OS', 'Networks', 'Databases'] },
   ];
 
@@ -185,7 +185,7 @@ export default function Home() {
         <div className="container">
           <div className="hero-eyebrow">
             <span className="dot-live" />
-            <span className="eyebrow-text">Open to remote contracts · Chandigarh, IN</span>
+            <span className="eyebrow-text">Open to onsite and remote works · Gurgaon, IN</span>
           </div>
 
           <h1 className="hero-h1">
@@ -258,12 +258,12 @@ export default function Home() {
                   Engineer at the boundary of backend and AI.
                 </h2>
                 <p className="body-text">
-                  Final-year CS graduate from Chitkara University with a 9.44 CGPA.
+                  A 2026 CS graduate from Chitkara University with a 9.44 CGPA.
                   I care about understanding how things work at a fundamental level —
                   whether that's CPU memory models, transformer attention, or distributed consensus.
                 </p>
                 <p className="body-text">
-                  At Quark Software (Trilogy), I spent six months porting a legacy C++ codebase to
+                  At Quark Software, I spent six months porting a legacy C++ codebase to
                   Apple Silicon (ARM64) and modernizing cross-platform builds involving OpenSSL and
                   Axis2 across macOS versions. Outside systems work, I've been building production AI
                   applications — RAG pipelines, MCP servers, and agentic LangGraph workflows.
@@ -297,7 +297,7 @@ export default function Home() {
               <div className="exp-header">
                 <div>
                   <h3 className="exp-role">R&D Engineer Intern</h3>
-                  <span className="exp-company">Quark Software — Trilogy</span>
+                  <span className="exp-company">Quark Software</span>
                 </div>
                 <span className="exp-date">Jan 2026 – Jun 2026</span>
               </div>
@@ -428,7 +428,7 @@ export default function Home() {
               Let's build<br />something real.
             </h2>
             <p className="contact-sub">
-              Open to remote freelance contracts, full-time roles, and interesting collaborations.
+              Open to onsite, hybrid and remote, full-time roles, and interesting collaborations.
               AI systems, developer tools, and backend engineering.
             </p>
             <div className="contact-ctas">

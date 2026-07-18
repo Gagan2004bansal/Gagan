@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Notes from "./Components/Notes";
 import MLAdminEditor from "./Components/MLAdminEditor";
 import MLDetail from "./Components/MLDetail";
+import LiveDemo from "./Components/Projects";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/contact" element={<Contactus />} />
         <Route path="/article" element={<Article />} />
         <Route path="/certifications" element={<Notes />} />
+        <Route path="/projects" element={<LiveDemo/>}/>
 
 
         {/* <Route path="/ml" element={<MachineLearning />} /> */}
