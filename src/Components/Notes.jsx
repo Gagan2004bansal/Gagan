@@ -4,16 +4,34 @@ import { useState } from "react";
 
 const certs = [
   {
+    id: 0,
+    title: "Agentic AI Fundamentals: Architectures, Frameworks, and Applications",
+    issuer: "LinkedIn Learning",
+    issuerTag: "LI",
+    category: "Engineering",
+    img: "https://media.licdn.com/dms/image/v2/D5622AQGUvG0Dq-0c8Q/feedshare-shrink_1280/B56Z95mXFoH4AM-/0/1784451527282?e=1784455369&v=beta&t=nqvk6tSixyXC5bBlmRU1wms-6STSRxCIrxFoYXI6kQ0",
+    link: "https://www.linkedin.com/learning/certificates/f7222e218ed1c6351a0a2c2f23fe86dd8198faeaa1b6c079b8caf42bbc1604dd",
+  },
+  {
     id: 1,
     title: "Software Architecture: Patterns for Developers",
     issuer: "LinkedIn Learning",
     issuerTag: "LI",
     category: "Engineering",
-    img: "https://media.licdn.com/dms/image/v2/D5622AQG_RYTjYVEyfg/feedshare-shrink_1280/B56Z2NRFIsKYAM-/0/1776191558425?e=1779475225&v=beta&t=pWZ0U2bVP6BW7GxmK8YsdvYwsOEUNNHsRoNJDtWpwZI",
+    img: "https://media.licdn.com/dms/image/v2/D5622AQG_RYTjYVEyfg/feedshare-shrink_1280/B56Z2NRFIsKYAM-/0/1776191558425?e=1784454826&v=beta&t=soS_gHB2XNG-GVCrY0_eX5Vy0S89VyT5tJrZ7HidlKM",
     link: "https://www.linkedin.com/learning/certificates/ed196d57010db1148603a2213e1cb6fe287b1c08f469bbb6c61ebdf5f7ae3d0f?trk=share_certificate",
   },
   {
     id: 2,
+    title: "Claude Code 101",
+    issuer: "Anthropic",
+    issuerTag: "AN",
+    category: "Engineering",
+    img: "https://cc.sj-cdn.net/certificate/tk9do23ky8ac/certificate-ugdiraohi42x-1784450796.jpg?Expires=1784454478&Signature=V7~xQYsxFBQ8Y7CYkEPOj680ZtLxHZcaNOwXQr2de6FxOlmYh5oiDye8wRkkYXYT1j5zuKnFIZunjztwv8haWyq8rsCefIWwSV07ZjnNX3prr2r5pNcfA66CWmzMf1vHN4AT-A7zhuy6DDppykVWiozpkDINCLECWI-q0hg-gXF8gJRUuS-QNzPWWUT5eCfCVSic-YyY0o-Ol2s8KtGz2dKG8~iSIqsXC5TtT7X3D32Ng5ym16JTZntI23T90ormi~fJNzTmS7gZQCoIisuwmb1MUCOOvr0Q8ch5SoHrz6RdgI1UrTPAklIEvolfK52Iu-5PGNFqXnxCOOmG71N-3A__&Key-Pair-Id=APKAI3B7HFD2VYJQK4MQ",
+    link: "https://verify.skilljar.com/c/ugdiraohi42x",
+  },
+  {
+    id: 3,
     title: "AI Foundations for Everyone",
     issuer: "Coursera / IBM",
     issuerTag: "CO",
@@ -22,7 +40,7 @@ const certs = [
     link: "https://coursera.org/share/cef8734df2b492650b47b5accbc9d10b",
   },
   {
-    id: 3,
+    id: 4,
     title: "Leading People and Teams",
     issuer: "Coursera / Michigan",
     issuerTag: "CO",
@@ -31,7 +49,7 @@ const certs = [
     link: "https://coursera.org/share/746e14424326f3efa99961ffb7554fc5",
   },
   {
-    id: 4,
+    id: 5,
     title: "The Art of the Job Interview",
     issuer: "Coursera",
     issuerTag: "CO",
@@ -40,7 +58,7 @@ const certs = [
     link: "https://coursera.org/share/aa1f8d46d97d6cfb646dc218c8cd1f13",
   },
   {
-    id: 5,
+    id: 6,
     title: "Figma Design Course",
     issuer: "Udemy",
     issuerTag: "UD",
@@ -49,7 +67,7 @@ const certs = [
     link: "https://www.udemy.com/certificate/UC-a39312cc-317c-45e7-bbda-033ffa8a85dd/",
   },
   {
-    id: 6,
+    id: 7,
     title: "C for Everyone: Programming",
     issuer: "Coursera / UC Santa Cruz",
     issuerTag: "CO",
@@ -58,7 +76,7 @@ const certs = [
     link: "https://coursera.org/share/c17aea30211de99ee27b74a68a79b836",
   },
   {
-    id: 7,
+    id: 8,
     title: "Postman API Student Expert",
     issuer: "Postman",
     issuerTag: "PM",
