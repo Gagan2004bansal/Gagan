@@ -2,10 +2,11 @@ import React from 'react';
 import Navbar from "./Navbar";
 import Medium from "./Medium";
 import { BookOpen, ArrowUpRight } from "@phosphor-icons/react";
+import CaseStudy from './CaseStudy';
 
 export default function Article() {
   return (
-    <div className="bg-white text-slate-900">
+    <div className="bg-black text-slate-900">
 
       <Navbar />
 
@@ -15,7 +16,7 @@ export default function Article() {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               {/* <BookOpen size={32} className="text-emerald-600" weight="bold" /> */}
-              <h1 style={{ fontFamily: "'Crimson Text', serif" }} className="text-5xl lg:text-6xl font-light">
+              <h1 style={{ fontFamily: "'Crimson Text', serif" }} className="text-5xl lg:text-6xl text-white">
                 Articles & Writing
               </h1>
             </div>
@@ -38,10 +39,12 @@ export default function Article() {
         </div>
       </section>
 
+      <CaseStudy/>
+
       {/* CTA Section */}
       <section className="py-16 px-6 lg:px-8 border-t border-slate-200">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-slate-900 text-white rounded-lg p-12 text-center space-y-6">
+          <div className="bg-black text-white rounded-lg p-12 text-center space-y-6">
             <h2 style={{ fontFamily: "'Crimson Text', serif" }} className="text-4xl font-light">
               Have a topic in mind?
             </h2>
@@ -60,7 +63,7 @@ export default function Article() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 py-12 px-6 lg:px-8 bg-white">
+      <footer className="border-t border-slate-200 py-12 px-6 lg:px-8 bg-black">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-sm text-slate-500 font-light">
           <div className="flex items-center gap-2">
             © 2026 • <span style={{ fontFamily: "'Geist Mono', monospace" }} className="text-xs text-emerald-600 font-medium">gagan.dev</span>

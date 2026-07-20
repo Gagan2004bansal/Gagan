@@ -872,6 +872,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { LinkedinLogo, GithubLogo, ArrowUpRight, MusicNote, Camera, Airplane, CaretDown, Translate } from "@phosphor-icons/react";
 import Navbar from './Navbar';
+import CaseStudy from './CaseStudy';
 
 /* ══════════════════════════════════════════════
    LANGUAGE CONFIG
@@ -1503,12 +1504,12 @@ export default function Home() {
             <p className="section-label">{t.skillsLabel}</p>
             <div className="skills-grid">
               {[
-                ['Languages', ['C++', 'JavaScript', 'Python', 'Java']],
-                ['Systems', ['Linux', 'Docker', 'Git', 'AWS', 'ARM64']],
-                ['Backend', ['Node.js', 'Express', 'FastAPI', 'PostgreSQL', 'MongoDB']],
+                ['Languages', ['C++', 'Java']],
+                ['Systems', ['Linux', 'Git', 'AWS', 'ARM64']],
+                ['Backend', ['Node.js', 'Express', 'FastAPI', 'PostgreSQL', 'MongoDB', 'Docker']],
                 ['Frontend', ['React', 'Vite', 'Tailwind', 'Socket.IO']],
                 ['GenAI', ['LLMs API', 'LangChain', 'LangGraph', 'LangSmith', 'Pinecone', 'Gemini API', 'MCP']],
-                ['Core CS', ['System Design', 'DSA', 'OS', 'Networks', 'Databases']],
+                ['Core CS', ['System Design', 'OOPs', 'OS', 'Networks', 'Databases']],
               ].map(([catKey, items], i) => (
                 <div key={catKey} className="skill-group">
                   <p className="skill-cat">{t.skillCats[i]}</p>
@@ -1521,6 +1522,8 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+
 
       {/* ────────────────── CONTACT ────────────────── */}
       <section id="contact" className="contact-section">
