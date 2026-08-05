@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Medium from "./Medium";
 import { BookOpen, ArrowUpRight } from "@phosphor-icons/react";
 import CaseStudy from './CaseStudy';
+import TopicCTA from './Topiccta';
 
 export default function Article() {
   return (
@@ -40,27 +41,7 @@ export default function Article() {
       </section>
 
       <CaseStudy/>
-
-      {/* CTA Section */}
-      <section className="py-16 px-6 lg:px-8 border-t border-slate-200">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-black text-white rounded-lg p-12 text-center space-y-6">
-            <h2 style={{ fontFamily: "'Crimson Text', serif" }} className="text-4xl font-light">
-              Have a topic in mind?
-            </h2>
-            <p className="text-slate-300 font-light text-lg leading-relaxed">
-              Suggest topics or collaborate on articles. Always interested in exploring new ideas.
-            </p>
-            <a 
-              href="mailto:gaganbansal2004@example.com"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-emerald-600 text-white font-medium rounded hover:bg-emerald-700 transition-colors"
-            >
-              Reach out
-              <ArrowUpRight size={18} weight="bold" />
-            </a>
-          </div>
-        </div>
-      </section>
+      <TopicCTA/>
 
       {/* Footer */}
       <footer className="border-t border-slate-200 py-12 px-6 lg:px-8 bg-black">
