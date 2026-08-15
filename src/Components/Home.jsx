@@ -3,14 +3,16 @@ import { LinkedinLogo, GithubLogo, ArrowUpRight, MusicNote, Camera, Airplane, Ca
 import Navbar from './Navbar';
 import CaseStudy from './CaseStudy';
 import LinkedInFeed from './LinkedInFeed';
+import handbook from '../assets/genai-handbook-cover.png'
+import handbookPDF from '../assets/GenAI_LLM_Engineering_Handbook.pdf'
 
 /* ══════════════════════════════════════════════
    LANGUAGE CONFIG
    ══════════════════════════════════════════════ */
 const LANGUAGES = [
   { code: 'en', label: 'English', native: 'English' },
-  { code: 'de', label: 'German',  native: 'Deutsch' },
-  { code: 'fr', label: 'French',  native: 'Français' },
+  { code: 'de', label: 'German', native: 'Deutsch' },
+  { code: 'fr', label: 'French', native: 'Français' },
 ];
 
 // Font stacks per language — each language gets its own "national" typographic feel
@@ -42,7 +44,7 @@ const FONT_STACKS = {
    ══════════════════════════════════════════════ */
 const T = {
   en: {
-    eyebrow: 'Open to onsite and remote works · Gurgaon, IN',
+    eyebrow: 'Open to Opportunities · Gurgaon, IN',
     typewriter: ['production AI systems.', 'scalable backends.', 'developer tools.', 'LangGraph agents.'],
     subStatic: 'Building ',
     heroBody: "Software engineer focused on the intersection of backend programming and applied AI — from low-level C++ to RAG pipelines and agentic workflows. Recently completed an R&D internship at Quark Software porting legacy macOS/ARM64 C++ systems.",
@@ -343,8 +345,8 @@ function LanguageSwitcher({ lang, setLang }) {
 
 /* ── GenAI Section status colors ── */
 const STATUS_COLOR = {
-  done:     { color: '#16a34a', bg: 'rgba(22,163,74,0.10)' },
-  active:   { color: '#2563eb', bg: 'rgba(37,99,235,0.10)' },
+  done: { color: '#16a34a', bg: 'rgba(22,163,74,0.10)' },
+  active: { color: '#2563eb', bg: 'rgba(37,99,235,0.10)' },
   learning: { color: '#d97706', bg: 'rgba(217,119,6,0.10)' },
 };
 
@@ -364,7 +366,7 @@ const PROJECT_TAGS = {
 
 const GITHUB_REPOS = [
   { repo: 'Gagan2004bansal/Genei-AI', label: 'Genei AI', desc: 'Multi-PDF RAG chatbot — FastAPI, Gemini, Pinecone, React' },
-  { repo: 'Gagan2004bansal/KVMemo',   label: 'KVMemo',   desc: 'Multithreaded C++ key-value store with WAL & LRU eviction' },
+  { repo: 'Gagan2004bansal/KVMemo', label: 'KVMemo', desc: 'Multithreaded C++ key-value store with WAL & LRU eviction' },
 ];
 
 function RepoCard({ repo, label, desc }) {
@@ -592,7 +594,7 @@ export default function Home() {
             <div className="skills-grid">
               {[
                 ['Languages', ['C++', 'Python', 'Java', 'Go']],
-                ['Web & Backend', ['React.Js', 'TailwindCSS' ,'Node.js', 'Express', 'Apache Kafka', 'FastAPI']],
+                ['Web & Backend', ['React.Js', 'TailwindCSS', 'Node.js', 'Express', 'Apache Kafka', 'FastAPI']],
                 ['GenAI', ['LLMs API', 'LangChain', 'LangGraph', 'LangSmith', 'Pinecone', 'RAG Pipelines', 'MCP', 'Agentic AI']],
                 ['Databases', ['MongoDB', 'SQL', 'PostgreSQL']],
                 ['Core CS & Tools', ['System Design', 'OOPs', 'OS', 'Networks', 'Databases', 'Git/Github', 'Linux']],
@@ -639,6 +641,46 @@ export default function Home() {
               );
             })}
           </div>
+
+          <Reveal delay={0.15}>
+            <div className="genai-handbook">
+              <div className="genai-handbook-cover">
+                <img
+                  src={handbook}
+                  alt="GenAI & LLM Engineering Handbook cover"
+                />
+              </div>
+
+              <div className="genai-handbook-content">
+                <p className="section-label">PERSONAL HANDBOOK</p>
+
+                <h3>GenAI & LLM Engineering Handbook</h3>
+
+                <p>
+                  My personal revision handbook covering LLM fundamentals,
+                  Transformers, Embeddings, RAG, LangChain, LangGraph,
+                  Agents, MCP, FastAPI and production GenAI architecture.
+                </p>
+
+                <div className="handbook-meta">
+                  <span>19 Chapters</span>
+                  <span>•</span>
+                  <span>Interview Prep</span>
+                  <span>•</span>
+                  <span>Project Defense</span>
+                </div>
+
+                <a
+                  href={handbookPDF}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="handbook-button"
+                >
+                  Read Handbook ↗
+                </a>
+              </div>
+            </div>
+          </Reveal>
 
           <Reveal delay={0.2}>
             <p className="section-label" style={{ color: '#6ee7b7', marginTop: '48px', marginBottom: '16px' }}>
@@ -1012,6 +1054,94 @@ export default function Home() {
         .footer-links { display: flex; gap: 16px; }
         .footer-links a { font-family: var(--font-body); font-size: 12px; color: #4b5563; transition: color 0.18s; }
         .footer-links a:hover { color: #f1f5f9; }
+
+        .genai-handbook {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  margin-top: 48px;
+  padding: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.55);
+  overflow: hidden;
+}
+
+.genai-handbook-cover {
+  width: 220px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #0f172a;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.genai-handbook-cover img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.genai-handbook-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.genai-handbook-content h3 {
+  margin: 8px 0 14px;
+  color: #f1f5f9;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.genai-handbook-content p:not(.section-label) {
+  max-width: 650px;
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+.handbook-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 24px;
+  color: #6ee7b7;
+  font-size: 14px;
+}
+
+.handbook-button {
+  width: fit-content;
+  padding: 11px 18px;
+  border-radius: 9px;
+  background: #6ee7b7;
+  color: #022c22;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.handbook-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+@media (max-width: 700px) {
+  .genai-handbook {
+    grid-template-columns: 1fr;
+  }
+
+  .genai-handbook-cover {
+    width: 180px;
+    margin: 0 auto;
+  }
+
+  .genai-handbook-content {
+    text-align: center;
+    align-items: center;
+  }
+}
       `}</style>
     </div>
   );
